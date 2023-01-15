@@ -1,0 +1,13 @@
+.row{
+    border:1px solid green;  
+    height:1em;
+    line-height:1em;
+  }
+  
+  .box{
+    display:inline-block;
+    width:6.25%;
+    height:1em;
+    box-sizing:border-box;
+    border:1px solid red; 
+  }

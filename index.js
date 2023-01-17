@@ -31,6 +31,8 @@ const sizeEl = document.querySelector('.size');
 let size = sizeEl.value;
 const color= document.querySelector('.color');
 const resetBtn = document.querySelector('.btn');
+const rainbowBtn = document.querySelector('.btn2');
+let rainbowSwitch = false;
 
 let draw = false;
 
@@ -42,9 +44,16 @@ function populate(size){
 
     div.addEventListener('mouseover',function(){
         if(!draw)return;
+        if(rainbowSwitch==true)
+        div.style.backgroundColor = random_rgba();
+        else
         div.style.backgroundColor = color.value;
     })
+    
     div.addEventListener('mousedown',function(){
+        if(rainbowSwitch==true)
+        div.style.backgroundColor = random_rgba();
+        else
         div.style.backgroundColor = color.value;
     })
     container.appendChild(div);
@@ -76,3 +85,14 @@ sizeEl.addEventListener('change', function(){
 })
 
 populate(size);
+
+rainbowBtn.addEventListener('click',function(){
+    rainbowSwitch = !rainbowSwitch
+})
+
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+

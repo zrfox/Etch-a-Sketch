@@ -46,7 +46,7 @@ body{
 }
 .navbar, .container{
     background-color: darkblue;
-    width:800px;
+    width: 1600px;;
     border-radius:3px;
 }
 .navbar{
@@ -55,10 +55,12 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
+    padding:0;
 }
-.btn, input{
+.btn, input, .btn2{
     height:35px;
     padding: 0 1em;
+    margin:0 1em;
 }
 .color{
     padding:0 .25em;
@@ -68,7 +70,7 @@ body{
 
 .container{
     --size: 4;
-    height: 800px;
+    height: 1600px;
     display:grid;
     grid-template-columns:repeat(var(--size), 1fr);/*fr = fractional unit*/
     grid-template-rows: repeat(var(--size),1fr);
@@ -77,5 +79,4 @@ body{
 }
 .pixel{
     background-color: gray;
-    border-radius:2px;
 }

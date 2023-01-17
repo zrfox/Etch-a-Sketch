@@ -1,13 +1,81 @@
-.row{
-    border:1px solid green;  
-    height:1em;
-    line-height:1em;
-  }
+/*.grid {
+    display: flexbox;  
+    flex-wrap: wrap;
+    min-width:30rem;
+    min-height:30rem;
+    max-width: 30rem;
+    max-height:30rem;
+
+    padding:0;
+    margin:0px;
+}
+
+.column {
   
-  .box{
-    display:inline-block;
-    width:6.25%;
-    height:1em;
-    box-sizing:border-box;
-    border:1px solid red; 
-  }
+    flex:1;
+    min-width:1em;
+    max-width:auto;
+    max-height: auto;
+
+}
+
+.row {
+    flex:1;
+    
+    min-width:1em;
+    min-height:1em;
+    max-width:auto;
+    max-height: auto;
+    border:1px solid gray; 
+}
+*/
+
+*{
+    margin:0;
+    padding:0;
+}
+html, body{
+    height:100%;
+}
+body{
+    background-color:rgb(187, 187, 187);
+    display:flex;
+    justify-content: center;
+    align-items: center; /*remove?*/
+    flex-direction:column;
+}
+.navbar, .container{
+    background-color: darkblue;
+    width:800px;
+    border-radius:3px;
+}
+.navbar{
+    padding:1em;
+    margin-bottom: 1em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn, input{
+    height:35px;
+    padding: 0 1em;
+}
+.color{
+    padding:0 .25em;
+    width:100px;
+    margin:0 1em;
+}
+
+.container{
+    --size: 4;
+    height: 800px;
+    display:grid;
+    grid-template-columns:repeat(var(--size), 1fr);/*fr = fractional unit*/
+    grid-template-rows: repeat(var(--size),1fr);
+    gap: 3px;
+    padding:3px;
+}
+.pixel{
+    background-color: gray;
+    border-radius:2px;
+}
